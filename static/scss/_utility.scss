@@ -1,0 +1,164 @@
+$rem: (
+  "1": 0.063,
+  "2": 0.125,
+  "3": 0.188,
+  "4": 0.25,
+  "5": 0.313,
+  "6": 0.375,
+  "7": 0.438,
+  "8": 0.5,
+  "9": 0.563,
+  "10": 0.625,
+  "11": 0.688,
+  "12": 0.75,
+  "13": 0.813,
+  "14": 0.875,
+  "15": 0.938,
+  "16": 1,
+  "17": 1.063,
+  "18": 1.125,
+  "20": 1.25,
+  "22": 1.375,
+  "23": 1.438,
+  "24": 1.5,
+  "25": 1.563,
+  "26": 1.625,
+  "28": 1.75,
+  "30": 1.875,
+  "31": 1.938,
+  "32": 2,
+  "35": 2.188,
+  "36": 2.25,
+  "40": 2.5,
+  "42": 2.625,
+  "44": 2.75,
+  "45": 2.813,
+  "46": 2.875,
+  "48": 3,
+  "50": 3.125,
+  "56": 3.5,
+  "57": 3.563,
+  "64": 4,
+  "68": 4.25,
+  "72": 4.5,
+  "75": 4.688,
+  "80": 5,
+  "88": 5.5,
+  "90": 5.625,
+  "96": 6,
+  "100": 6.25,
+  "150": 9.375,
+);
+@each $px, $value in $rem {
+  .fs-#{$px} {
+    font-size: #{$value}rem !important;
+  }
+  .gap-#{$px} {
+    gap: #{$value}rem !important;
+  }
+}
+$properties: (
+  (margin-top, mt, my, m),
+  (margin-bottom, mb, my, m),
+  (margin-left, ms, mx, m),
+  (margin-right, me, mx, m),
+  (padding-top, pt, py, p),
+  (padding-bottom, pb, py, p),
+  (padding-left, ps, px, p),
+  (padding-right, pe, px, p)
+);
+@each $px, $value in $rem {
+  @if $px !="1" and $px !="2" and $px !="3" and $px !="4" and $px !="5" {
+    @each $property, $short, $combined, $base in $properties {
+      .#{$base}-#{$px},
+      .#{$combined}-#{$px},
+      .#{$short}-#{$px} {
+        #{$property}: #{$value}rem !important;
+      }
+    }
+  }
+}
+$table-cell: (
+  "0": 0,
+  "4": 0.25,
+  "6": 0.375,
+  "8": 0.5,
+  "10": 0.625,
+  "12": 0.75,
+  "14": 0.875,
+  "16": 1,
+  "18": 1.125,
+  "20": 1.25,
+  "22": 1.375,
+  "24": 1.5,
+  "28": 1.75,
+  "32": 2,
+);
+@each $px, $value in $rem {
+  .td-fs-#{$px} td {
+    font-size: #{$value}rem !important;
+  }
+  .th-fs-#{$px} th {
+    font-size: #{$value}rem !important;
+  }
+  @each $property, $short, $combined, $base in $properties {
+    .td-#{$base}-#{$px} td,
+    .td-#{$combined}-#{$px} td,
+    .td-#{$short}-#{$px} td {
+      #{$property}: #{$value}rem !important;
+    }
+    .th-#{$base}-#{$px} th,
+    .th-#{$combined}-#{$px} th,
+    .th-#{$short}-#{$px} th {
+      #{$property}: #{$value}rem !important;
+    }
+  }
+
+  .th-p-#{$px} th,
+  .th-py-#{$px} th,
+  .th-pt-#{$px} th {
+    padding-top: #{$value}rem !important;
+  }
+
+  .th-p-#{$px} th,
+  .th-py-#{$px} th,
+  .th-pb-#{$px} th {
+    padding-bottom: #{$value}rem !important;
+  }
+
+  .th-p-#{$px} th,
+  .th-px-#{$px} th,
+  .th-ps-#{$px} th {
+    padding-left: #{$value}rem !important;
+  }
+
+  .th-p-#{$px} th,
+  .th-px-#{$px} th,
+  .th-pe-#{$px} td {
+    padding-right: #{$value}rem !important;
+  }
+
+  .td-p-#{$px} td,
+  .td-py-#{$px} td,
+  .td-pt-#{$px} td {
+    padding-top: #{$value}rem !important;
+  }
+
+  .td-p-#{$px} td,
+  .td-py-#{$px} td,
+  .td-pb-#{$px} td {
+    padding-bottom: #{$value}rem !important;
+  }
+
+  .td-p-#{$px} td,
+  .td-px-#{$px} td,
+  .td-ps-#{$px} td {
+    padding-left: #{$value}rem !important;
+  }
+
+  .td-p-#{$px} td,
+  .td-px-#{$px} td,
+  .td-pe-#{$px} td {
+    padding-right: #{$value}rem !important;
+  }
+}

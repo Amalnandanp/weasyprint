@@ -1,0 +1,228 @@
+/* WORK SANS FONT FAMILY */
+@font-face {
+    font-family: 'WorkSans';
+    src: url('../fonts/worksans/WorkSans-Thin.ttf') format('truetype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'WorkSans';
+    src: url('../fonts/worksans/WorkSans-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'WorkSans';
+    src: url('../fonts/worksans/WorkSans-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'WorkSans';
+    src: url('../fonts/worksans/WorkSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'WorkSans';
+    src: url('../fonts/worksans/WorkSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'WorkSans';
+    src: url('../fonts/worksans/WorkSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'WorkSans';
+    src: url('../fonts/worksans/WorkSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'WorkSans';
+    src: url('../fonts/worksans/WorkSans-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'WorkSans';
+    src: url('../fonts/worksans/WorkSans-Black.ttf') format('truetype');
+    font-weight: 900;
+}
+@page {
+    font-family: 'WorkSans', sans-serif;
+    margin: 2.5rem;
+    /* border: 1px solid #E4E8EA; */
+}
+:root {
+    font-size: 10px;
+}
+* , *::before, *::after {
+    box-sizing: border-box;
+    line-height: normal;
+
+}
+body {
+    margin: 0;
+    color: #000;
+    font-size: 10pt;
+    font-family: 'WorkSans', sans-serif;
+    font-weight: 400;
+    /* line-height: normal; */
+}
+.logo {
+    height: 6rem;
+}
+p {
+    word-break: break-all;
+    margin: 0;
+    /* line-height: ; */
+}
+td {
+    /* border: 1px solid #f59f00; */
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.border {
+    border: 1px solid  #566976;
+}
+.table-border-td td{
+    border: 1px solid #566976;
+}
+.table-border-tr tr{
+    border: 1px solid #566976;
+}
+.w-50{
+    width: 50%;
+}
+.w-75{
+    width: 75%;
+}
+.w-100{
+    width: 100%;
+}
+/* ############################### */
+/***** Typography *****/
+/* ############################### */
+.fw-500 {
+    font-weight: 500;
+}
+.fw-600 {
+    font-weight: 600;
+}
+.fw-700 {
+    font-weight: 700;
+}
+.text-center {
+    text-align: center;
+}
+.text-start {
+    text-align: left;
+}
+.text-end {
+    text-align: right;
+}
+/* .lh-0 {
+    line-height: 0px;
+} */
+.lh-16 {
+    line-height: 1rem;
+}
+.lh-24 {
+    line-height: 1.5rem;
+}
+/* ############################### */
+/***** End Typography *****/
+/* ############################### */
+/* ############################### */
+/***** Color *****/
+/* ############################### */
+.bg1 {
+    background-color: #dceafb;
+}
+.bg2 {
+    background-color: #e5ecf7;
+}
+.bg3 {
+    background-color: #b3d7f0;
+}
+.text-grey {
+    color: #566976;
+}
+.text-accent2 {
+    color: #0078CE;
+}
+.text-success {
+    color: #28A745;
+}
+.text-danger {
+    color: #DC3545;
+}
+/* ############################### */
+/***** End Color *****/
+/* ############################### */
+/* ############################### */
+/* ####### Utility Start ######### */
+/* ############################### */
+
+.hr {
+    border-top: 1pt solid #566976;
+    width: 100%;
+    height: .0625rem;
+}
+.border-accent2 {
+    border: 1px solid #0078CE;
+}
+.border-accent2 td,
+.border-accent2 tr {
+    /* border: none; */
+}
+.border-grey {
+    border: 1px dotted #C3CBD1;
+}
+.border-row td,
+.border-row th {
+    border-width: 0;
+}
+.d-flex{
+    display: flex;
+}
+.align-items-center {
+    align-items: center;
+}
+/* ********* Table ************* */
+
+.vertical-align-top td {
+    vertical-align: top;
+}
+.horizontal-align-center td {
+    text-align: center;
+}
+.td-fw-500 td {
+    font-weight: 500;
+}
+.td-fw-600 td {
+    font-weight: 600;
+}
+
+/* ############################### */
+/**** Page Footer ***/
+/* ############################### */
+.page-footer {
+    border-top: 1px solid #E4E8EA;
+    font-size: 6pt;
+    color: #566976;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.page-footer p {
+    text-align: center;
+
+}
+
+@media print {
+    .page-footer {
+        position: fixed;
+        bottom: -2.5rem;
+
+    }
+}

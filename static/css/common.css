@@ -89,6 +89,16 @@ table {
 .table-border-tr tr{
     border: 1px solid #566976;
 }
+.table-border-top-tr tr:not(:first-child) {
+    border-top: 1px solid #566976;
+}
+.border-none {
+    border: none;
+    visibility: collapse;
+}
+.table-border-top-tr tr:first-child {
+    border-top: none;
+}
 .w-25{
     width: 25%;
 }

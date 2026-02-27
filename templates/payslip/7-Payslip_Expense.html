@@ -1,0 +1,208 @@
+{% load static %} <html lang="en">
+<head>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td style="width: 50%;">
+                    <img src="{% static 'img/logo.png' %}" class="logo">
+                </td>
+                <td class="text-end">
+                    <p class="fs-16 pb-8 fw-700 ">Company name</p>
+                    <p class="fs-14 lh-16" style="font-size: 1rem;"> Company address Line 1 State, City, Country -
+                        Pincode </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="hr"></div>
+    <p class="fs-16 fw-700 text-center py-18">Expense Report</p>
+    <table class="vertical-align-top">
+        <tbody>
+            <tr>
+                <td class="w-50 p-8 border">
+                    <table class="td-py-6 td-px-8 td-fs-12">
+                        <tbody>
+                            <tr class="">
+                                <td class="fw-600 w-50">Submitted By:</td>
+                                <td class="fw-500">
+                                    <p>Madhukar Dhar</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fw-600">
+                                    <p> Report Name:</p>
+                                </td>
+                                <td class="fw-500">
+                                    <p> Report 1</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td class="w-50 p-8 border">
+                    <table class="td-py-6 td-px-8 td-fs-12">
+                        <tbody>
+                            <tr>
+                                <td class="fw-600 w-50">
+                                    <p>Report Duration:</p>
+                                </td>
+                                <td class="fw-500">
+                                    <p>03/08/2023 to 05/08/2023</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fw-600">
+                                    <p> Report Number: </p>
+                                </td>
+                                <td class="fw-500">
+                                    <p> ER-00001</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="py-8"></div>
+    <table class="">
+        <tbody>
+            <tr class="border-accent2-dashed">
+                <td class="w-25 px-8 py-20 bg1 text-center">
+                    <p class="fs-16 fw-600">Reimbursed Amount:</p>
+                </td>
+                <td class="w-75 p-8 px-22 text-end">
+                    <p class="fs-22 fw-600 text-accent2">₹1,23,000</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="fs-18 fw-700 py-18">Trip Summary <span class="fs-14"> (Trip Number : TRIP-0001)</span> </p>
+    <table class="td-py-8 border table-border-td  td-px-8 td-fs-12">
+        <tbody>
+            <tr class="bg2">
+                <td class="fw-600 w-33 ">From</td>
+                <td class="text-center w-33 fw-600">
+                    <p>To</p>
+                </td>
+                <td class="text-end w-33 fw-600">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="">
+                <td class="">Kochi (02/08/2023)</td>
+                <td class="text-center">
+                    <p>Delhi (03/08/2023)</p>
+                </td>
+                <td class="text-end">
+                    <p> Travel from Kochi to Delhi</p>
+                </td>
+            </tr>
+            <tr class="">
+                <td class="">Kochi (02/08/2023)</td>
+                <td class="text-center">
+                    <p>Delhi (03/08/2023)</p>
+                </td>
+                <td class="text-end">
+                    <p> Travel from Kochi to Delhi</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="fs-18 fw-700 py-18">Expense Summary</p>
+    <table class="td-py-8 border table-border-td  td-px-8 td-fs-12">
+        <tbody>
+            <tr class="bg2">
+                <td class="fw-600  ">S.No</td>
+                <td class="text-center w-33 fw-600">
+                    <p>Expense Date</p>
+                </td>
+                <td class="text-center w-33 fw-600">
+                    <p>Expense Category </p>
+                </td>
+                <td class="text-end w-33 fw-600">
+                    <p>Amount</p>
+                </td>
+            </tr>
+            <tr class="">
+                <td class="">1</td>
+                <td class="text-center">
+                    <p>03/08/2023</p>
+                </td>
+                <td class="text-center">
+                    <p>Lodging</p>
+                </td>
+                <td class="text-end">
+                    <p>₹25,000</p>
+                </td>
+            </tr>
+            <tr class="">
+                <td class="">2</td>
+                <td class="text-center">
+                    <p>04/08/2023</p>
+                </td>
+                <td class="text-center">
+                    <p>Transport</p>
+                </td>
+                <td class="text-end">
+                    <p>₹25,000</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+      <p class="fs-18 fw-700 py-18">Report Summary</p>
+
+   <table class="td-py-8 border table-border-tr td-px-8 td-fs-12">
+        <thead>
+            <tr class="bg2">
+                <th class="fw-600 w-75">
+                    <p>Total</p>
+                </th>
+                <th class="fw-600 text-end">
+                    <p>Amount </p>
+                </th>
+            </tr>
+            </thead>
+							<tbody>
+
+            <tr>
+                <td class="fw-600">
+                    <p>Total Expense Amount: </p>
+                </td>
+                <td class="text-end">
+                    <p>&#x20B9;5,000</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="fw-600">
+                    <p>Non Reimbursable Amount: </p>
+                </td>
+                <td class="text-end">
+                    <p>&#x20B9;5,000</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="fw-600">
+                    <p>Advance Amount: </p>
+                </td>
+                <td class="text-end">
+                    <p>&#x20B9;5,000</p>
+                </td>
+            </tr>
+            <tr class="bg2">
+                <td class="fw-600">
+                    <p>Total Reimbursed Amount:</p>
+                </td>
+                <td class="text-end fw-600">
+                    <p>&#x20B9;8,928</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="page-footer">
+        <div class="footer-float">This is a system-generated payslip and does not require a signature</div>
+    </div>
+</body>
+</html>

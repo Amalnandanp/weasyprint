@@ -21,5 +21,5 @@ from pdfapp.views import home, generate_pdf
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
-    path('pdf/<str:template_id>/', generate_pdf, name='generate_pdf'),
+    path('pdf/<str:template_name>/', generate_pdf, name='generate_pdf'),
 ]

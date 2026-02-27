@@ -14,5 +14,15 @@
             </li>
         {% endfor %}
     </ul>
+
+    <h2>Select Taxslip Template</h2>
+
+    <ul>
+        {% for template in tax_templates %}
+            <li>
+                <a href="/taxpdf/{{ template }}/">{{ template }}</a>
+            </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>

@@ -10,7 +10,14 @@ def home(request):
     payslip_dir = os.path.join(settings.BASE_DIR, "templates/payslip")
     templates = sorted([f for f in os.listdir(payslip_dir) if f.endswith('.html')])
 
-    context = {'templates': templates}
+    # Get all HTML templates from taxslip folder
+    taxslip_dir = os.path.join(settings.BASE_DIR, "templates/taxslip")
+    tax_templates = sorted([f for f in os.listdir(taxslip_dir) if f.endswith('.html')])
+
+    context = {
+        'templates': templates,
+        'tax_templates': tax_templates,
+    }
     return render(request, "home.html", context)
 
 def generate_pdf(request, template_name):
@@ -23,6 +30,34 @@ def generate_pdf(request, template_name):
 
     # Check if file exists and is in payslip folder
     if not os.path.exists(payslip_file):
+        raise Http404("Template not found")
+
+    html_string = render_to_string(template_path)
+
+    css_common = os.path.join(settings.BASE_DIR, "static/css/common.css")
+    css_utility = os.path.join(settings.BASE_DIR, "static/css/style.css")
+
+    pdf = HTML(
+        string=html_string,
+        base_url=request.build_absolute_uri('/')
+    ).write_pdf(
+        stylesheets=[CSS(css_common), CSS(css_utility)]
+    )
+
+    response = HttpResponse(pdf, content_type="application/pdf")
+    response["Content-Disposition"] = f"inline; filename={template_name.replace('.html', '.pdf')}"
+    return response
+
+def generate_tax_pdf(request, template_name):
+    # Validate template name to prevent directory traversal
+    if ".." in template_name or template_name.startswith('/'):
+        raise Http404("Invalid template name")
+
+    template_path = f"taxslip/{template_name}"
+    taxslip_file = os.path.join(settings.BASE_DIR, "templates", template_path)
+
+    # Check if file exists and is in taxslip folder
+    if not os.path.exists(taxslip_file):
         raise Http404("Template not found")
 
     html_string = render_to_string(template_path)

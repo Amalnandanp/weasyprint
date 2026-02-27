@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from pdfapp.views import home, generate_pdf
+from pdfapp.views import home, generate_pdf, generate_tax_pdf
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('pdf/<str:template_name>/', generate_pdf, name='generate_pdf'),
+    path('taxpdf/<str:template_name>/', generate_tax_pdf, name='generate_tax_pdf'),
 ]

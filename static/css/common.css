@@ -83,6 +83,11 @@ table {
 .border {
     border: 1px solid  #566976;
 }
+.table-border-left-td {
+    th:not(:first-child) ,td:not(:first-child){
+    border-left: 1px solid #566976;
+}
+}
 .table-border-td td{
     border: 1px solid #566976;
 }
@@ -101,6 +106,9 @@ table {
 }
 .w-25{
     width: 25%;
+}
+.w-33{
+    width: 33.33%;
 }
 .w-50{
     width: 50%;

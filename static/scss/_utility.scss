@@ -95,70 +95,28 @@ $table-cell: (
   "32": 2,
 );
 @each $px, $value in $rem {
-  .td-fs-#{$px} td {
+  .td-fs-#{$px} {
+    td,th {
     font-size: #{$value}rem !important;
   }
-  .th-fs-#{$px} th {
-    font-size: #{$value}rem !important;
   }
+  // .th-fs-#{$px} th {
+  //   font-size: #{$value}rem !important;
+  // }
   @each $property, $short, $combined, $base in $properties {
-    .td-#{$base}-#{$px} td,
-    .td-#{$combined}-#{$px} td,
-    .td-#{$short}-#{$px} td {
-      #{$property}: #{$value}rem !important;
+    .td-#{$base}-#{$px},
+    .td-#{$combined}-#{$px} ,
+    .td-#{$short}-#{$px} {
+     th,td {
+        #{$property}: #{$value}rem !important;
+
+      }
     }
-    .th-#{$base}-#{$px} th,
-    .th-#{$combined}-#{$px} th,
-    .th-#{$short}-#{$px} th {
-      #{$property}: #{$value}rem !important;
-    }
+    // .th-#{$base}-#{$px} th,
+    // .th-#{$combined}-#{$px} th,
+    // .th-#{$short}-#{$px} th {
+    //   #{$property}: #{$value}rem !important;
+    // }
   }
 
-  .th-p-#{$px} th,
-  .th-py-#{$px} th,
-  .th-pt-#{$px} th {
-    padding-top: #{$value}rem !important;
-  }
-
-  .th-p-#{$px} th,
-  .th-py-#{$px} th,
-  .th-pb-#{$px} th {
-    padding-bottom: #{$value}rem !important;
-  }
-
-  .th-p-#{$px} th,
-  .th-px-#{$px} th,
-  .th-ps-#{$px} th {
-    padding-left: #{$value}rem !important;
-  }
-
-  .th-p-#{$px} th,
-  .th-px-#{$px} th,
-  .th-pe-#{$px} td {
-    padding-right: #{$value}rem !important;
-  }
-
-  .td-p-#{$px} td,
-  .td-py-#{$px} td,
-  .td-pt-#{$px} td {
-    padding-top: #{$value}rem !important;
-  }
-
-  .td-p-#{$px} td,
-  .td-py-#{$px} td,
-  .td-pb-#{$px} td {
-    padding-bottom: #{$value}rem !important;
-  }
-
-  .td-p-#{$px} td,
-  .td-px-#{$px} td,
-  .td-ps-#{$px} td {
-    padding-left: #{$value}rem !important;
-  }
-
-  .td-p-#{$px} td,
-  .td-px-#{$px} td,
-  .td-pe-#{$px} td {
-    padding-right: #{$value}rem !important;
-  }
 }

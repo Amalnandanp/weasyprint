@@ -89,6 +89,9 @@ table {
 .table-border-tr tr{
     border: 1px solid #566976;
 }
+.w-25{
+    width: 25%;
+}
 .w-50{
     width: 50%;
 }
@@ -143,6 +146,9 @@ table {
 .bg3 {
     background-color: #b3d7f0;
 }
+.bg4 {
+    background-color: #DCEAFB66;
+}
 .text-grey {
     color: #566976;
 }
@@ -169,6 +175,13 @@ table {
 }
 .border-accent2 {
     border: 1px solid #0078CE;
+}
+.box-accent2 {
+    border-left: 5px solid #0078CE;
+    border-radius: 5px;
+}
+.border-accent2-dashed {
+    border: 1px dashed #0078CE;
 }
 .border-accent2 td,
 .border-accent2 tr {
